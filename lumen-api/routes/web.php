@@ -13,6 +13,12 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->post('login', 'AuthController@login');
+
+$router->group(['middleware' => 'auth:api'], function () use ($router) {
+    $router->get('user', 'UserController@index');
+    $router->get('user/{id}', 'UserController@show');
+    $router->post('user', 'UserController@store');
+    $router->put('user/{id}', 'UserController@update');
+    $router->delete('user/{id}', 'UserController@destroy');
 });
