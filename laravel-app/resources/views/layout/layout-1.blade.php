@@ -83,20 +83,6 @@
     </script>
     <!-- AdminLTE App -->
     <script src="{{ url('/assets/template-admin/') }}/dist/js/adminlte.js"></script>
-
-    <!-- PAGE PLUGINS -->
-    <!-- jQuery Mapael -->
-    <script src="{{ url('/assets/template-admin/') }}/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-    <script src="{{ url('/assets/template-admin/') }}/plugins/raphael/raphael.min.js"></script>
-    <script src="{{ url('/assets/template-admin/') }}/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-    <script src="{{ url('/assets/template-admin/') }}/plugins/jquery-mapael/maps/usa_states.min.js"></script>
-    <!-- ChartJS -->
-    <script src="{{ url('/assets/template-admin/') }}/plugins/chart.js/Chart.min.js"></script>
-
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ url('/assets/template-admin/') }}/dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ url('/assets/template-admin/') }}/dist/js/pages/dashboard2.js"></script>
     @stack('script_bottom')
 </body>
 
