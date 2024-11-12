@@ -18,7 +18,7 @@ class UserService {
         $User->user_fullname = $request->fullname;
         $User->user_email = $request->email;
         $User->user_password = Hash::make($request->password);
-        $User->user_status = $request->status ?? 1;
+        $User->user_status = $request->status;
         $User->save();
         return $User;
     }
@@ -35,10 +35,7 @@ class UserService {
         if($request->password){
             $User->user_password = Hash::make($request->password);
         }
-        if($request->status){
-            $User->user_status = $request->status;
-        }
-
+        $User->user_status = $request->status;
         $User->save();
         return $User;
     }
